@@ -31,3 +31,20 @@ cd ~/.gz/fuel
 fgrep -r "ignitionrobotics" in the url to "gazebosim"
 # Refer: https://github.com/gazebosim/gz-sim/issues/2281
 ```
+
+## CLI
+
+```bash
+# Ask for help menu
+gz topic -h
+# Ask for topic type
+gz topic -t /model/tugbot/cmd_vel -i
+# Listen to a topic by echoing
+gz topic -t /model/tugbot/cmd_vel -i
+# Publish to a topic
+gz topic -t /model/tugbot/cmd_vel -m gz.msgs.Twist -p "linear: {}, angular: {}"
+gz topic -t /model/tugbot/cmd_vel -m gz.msgs.Twist -p "linear: {x: 0.0}, angular: {z: -0.5}"
+gz topic -t /model/tugbot/cmd_vel -m gz.msgs.Twist -p "linear: {}, angular: {z: 0.5}"
+```
+
+Refer: https://robotics.stackexchange.com/questions/104391/publishing-a-topic-from-command-line-gz-topic-t-p-seams-to-be-unreliable
