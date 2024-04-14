@@ -4,9 +4,14 @@ This repository keeps notes on the common issues with Gazebo (non-classic). Brac
 
 ## Installation
 
-Ubuntu 22.04
+Ubuntu 22.04 Harmonic
 ```bash
 ansible-pull -U https://github.com/brucechanjianle/ansible-gazebo -K -C harmonic
+```
+
+Ubuntu 22.04 garden
+```bash
+ansible-pull -U https://github.com/brucechanjianle/ansible-gazebo -K -C harmonic -e "gz_distribution=garden"
 ```
 
 ## Usage
