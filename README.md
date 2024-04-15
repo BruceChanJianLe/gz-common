@@ -53,3 +53,11 @@ gz topic -t /model/tugbot/cmd_vel -m gz.msgs.Twist -p "linear: {}, angular: {z: 
 ```
 
 Refer: https://robotics.stackexchange.com/questions/104391/publishing-a-topic-from-command-line-gz-topic-t-p-seams-to-be-unreliable
+
+## Attention
+
+When creating robot from xacro, note to use `$(find package_name)` to include xacro files.
+And use `file://$(find package_name)` to include geometry and visual.
+If used wrongly, gazebo may not be able to find the meshes, other rviz2 will not be able to find the meshes.
+Watch carefully in `/robot_description` topic.
+Refer: https://github.com/brucechanjianle/p3dx humble_garden branch.
